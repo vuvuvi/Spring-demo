@@ -27,7 +27,7 @@ public class DiscographyController {
     @GetMapping
     public String indexAction(Map<String, Object> model) {
         List<DiscographyEntity> disco =  discographyRepository.findByband("NNMM");
-        List<DiscographyEntity> discoAlbum = discographyRepository.findByAlbum("NNMM");
+        List<DiscographyEntity> discoAlbum = discographyRepository.findByAlbum("Eons");
         model.put("user", Arrays.asList("NNMM", "Daïne", "666leepOver"));
 
         return "discography/index";
